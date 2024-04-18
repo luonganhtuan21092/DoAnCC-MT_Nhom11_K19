@@ -1,0 +1,111 @@
+<div class="container"> 
+     <table id="cart" class="table table-hover table-condensed"> 
+      <thead> 
+       <tr> 
+        <th style="width:50%">Tên sản phẩm</th> 
+        <th style="width:10%">Giá</th> 
+        <th style="width:8%">Số lượng</th> 
+        <th style="width:22%" class="text-center">Thành tiền</th> 
+        <th style="width:10%"> </th> 
+       </tr> 
+      </thead> 
+      <tbody><tr> 
+       <td data-th="Product"> 
+        <div class="row"> 
+         <div class="col-sm-2 hidden-xs"><img src="../java/web/Images/SH350i.jpg" alt="SH 350I" class="img-responsive" width="100">
+         </div> 
+         <div class="col-sm-10"> 
+          <h4 class="nomargin">SH 350I</h4> 
+          <p>Siêu phẩm của tốc độ</p> 
+         </div> 
+        </div> 
+       </td> 
+       <td data-th="Price">200.000.000 đ</td> 
+       <td data-th="Quantity"><input class="form-control text-center" value="1" type="number">
+       </td> 
+       <td data-th="Subtotal" class="text-center">200.000.000 đ</td> 
+       <td class="actions" data-th="">
+        <button class="btn btn-info btn-sm"><i class="fa fa-edit"></i>
+        </button> 
+        <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i>
+        </button>
+       </td> 
+      </tr> 
+      <tr> 
+       <td data-th="Product"> 
+        <div class="row"> 
+         <div class="col-sm-2 hidden-xs"><img src="../java/web/Images/airblade.jpg" alt="Air Blade 125" class="img-responsive" width="100">
+         </div> 
+         <div class="col-sm-10"> 
+          <h4 class="nomargin">Air Blade 125</h4> 
+          <p>Xe ngon giá tốt</p> 
+         </div> 
+        </div> 
+       </td> 
+       <td data-th="Price">50.000.000 đ</td> 
+       <td data-th="Quantity"><input class="form-control text-center" value="1" type="number">
+       </td> 
+       <td data-th="Subtotal" class="text-center">50.000.000 đ</td> 
+       <td class="actions" data-th="">
+        <button class="btn btn-info btn-sm"><i class="fa fa-edit"></i>
+        </button> 
+        <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i>
+        </button>
+       </td> 
+      </tr> 
+      </tbody><tfoot> 
+       <tr class="visible-xs"> 
+        <td class="text-center"><strong>Tổng 250.000.000 đ</strong>
+        </td> 
+       </tr> 
+       <tr> 
+        <td><a href="../java/index.html" class="btn btn-warning"><i class="fa fa-angle-left"></i> Tiếp tục mua hàng</a>
+        </td> 
+        <td colspan="2" class="hidden-xs"> </td> 
+        <td class="hidden-xs text-center"><strong>Tổng tiền 250.000.000 đ</strong>
+        </td> 
+        <td><a href="../java/ok.html" class="btn btn-success btn-block">Xác nhận đặt hàng <i class="fa fa-angle-right"></i></a>
+        </td> 
+       </tr> 
+      </tfoot> 
+     </table>
+    </div>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+<script>
+    $('document').ready(function(){
+        var ran = Math.floor((Math.random() * 10000) + 1000);
+        showTo(ran);
+        setInterval(function(){
+                var ran = Math.floor((Math.random() * 000) + 000);
+                showTo(ran);
+        }, 15000);
+
+    });
+    
+    function showTo(ran) {
+        setTimeout(function(){
+            toastr.options.positionClass  = 'toast-bottom-right';
+            toastr.options.showDuration  = 300;
+            toastr.options.hideDuration  = 300;
+            toastr.options.timeOut  = 5000; <!-- show time -->
+            var phones = ['0169918xxxx','090167xxxx','090277xxxx','097890xxxx','096899xxxx','098746xxxx','0163389xxxx','0168999xxxx','09611xxxx','098687xxxx','098687xxxx','086813xxxx','094246xxxx','092140xxxx','0163733xxxx','098134xxxx','096568xxxx','086879xxxx','0165363xxxx','0165363xxxx','0167435xxxx','097302xxxx','097821xxxx','091371xxxx','0122206xxxx','096677xxxx','088863xxxx','0121272xxxx','088605xxxx','097847xxxx','097948xxxx','096577xxxx','091623xxxx','094213xxxx','0124988xxxx','096185xxxx'];
+            var names = ['Hoàng Huyền','Tạ Khánh Hồng','Thu Nguyệt','Thanh Tâm','Phan Thị Thuỳ','Lê Thị Bình','Trần Hồng Quế','Ngọc Dung','Phan Hồng Ân','Thanh Nhàn','Nguyễn Thuý Vân','Mạc Thị Thuý','Dương Thanh Thuỷ','Kiều Mai','Phan Duy Tân','Nguyễn Hồng Lân','Phạm Nhật Hạ','Quách Thị Hạnh','Nguyễn Thu Lan','Phạm Thu Hà'];
+			var times = ['3 phút trước','2 phút trước','7 phút trước','1 phút trước','10 phút trước','4 phút trước','2 phút trước','6 phút trước','8 phút trước','2 phút trước'];
+            var phone = phones[Math.floor(Math.random()*phones.length)];
+            var name = names[Math.floor(Math.random()*names.length)];
+			var time = times[Math.floor(Math.random()*times.length)];
+			
+            title = 'Cám ơn ' + name;
+            var msg = phone + ' đã đặt hàng thành công ' + time;
+            toastr.success(msg, title);
+
+        }, ran);
+    }
+</script>
+
+    </body>
