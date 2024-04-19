@@ -1,0 +1,18 @@
+<p class = "message hidden">Đặt hàng thành công!</p>
+<form action="/" id = "form" target="hidden_iframe">
+  <input type="text" placeholder="Kha">
+  <input type="text" placeholder="0333794825">
+  <input type="submit" value="Submit">
+</form> 
+<iframe class = "myifram hidden" name="hidden_iframe"></iframe>
+<script>
+    $(document).ready(function() {
+      $("form").submit(function() {
+        $(".message").removeClass('hidden');
+        setTimeout(function() {
+          $(".message").addClass('hidden');
+          document.getElementById("contact").reset();
+        }, 4000);
+      });
+    });
+  </script>
